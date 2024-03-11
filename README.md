@@ -79,3 +79,28 @@ kubectl get services
 ```
 minikube service cca2324-bun-app-service
 ```
+
+- Cleaning up the K8s
+
+After the testing of our exercice we will want to cleaning up all, following next steps the environment will be remain clear.
+
+- Delete the service
+
+```
+kubectl delete service cca2324-bun-app-service
+```
+
+- Delete the deployment
+
+```
+kubectl delete deployment cca2324-bun-app-deployment
+```
+
+- Delete all of the minikube clusters
+
+```
+minikube delete --all
+```
+
+A special reagards for **hesxenon**, for helping us to learn using their **realworld-htmx** application.
+And another specila mention to **minikube**, they are helping to learn how to work with k8s.
