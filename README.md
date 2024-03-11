@@ -4,13 +4,7 @@ Create an image of a bun application and deploy in K8s
 ## Docker image
 We need docker in our system, next [link](https://docs.docker.com/get-docker/) indicates how to proceed to install.
 
-After docker instalation, we can get **realworld-htmx** application from **[https://github.com/hesxenon/realworld-htmx.git](https://github.com/hesxenon/realworld-htmx)** using next command in our working directory:
-
-```
-git clone https://github.com/hesxenon/realworld-htmx.git
-```
-
-With the code of the application in our working directory, we create the **Dockerfile** that you can consult in this repository.
+The **Dockerfile** of this repository contain the detail to generate the image.
 
 ```
 docker build -t ivanmargarit/cca2324-bun-app:latest  .
