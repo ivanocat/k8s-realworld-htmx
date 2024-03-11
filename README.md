@@ -1,4 +1,4 @@
-# cca2324-bun-app - Dockerize Bun app and deploy in K8s
+# Dockerize Bun app and deploy in K8s
 Create an image of a bun application and deploy in K8s
 
 ## Docker image
