@@ -32,12 +32,50 @@ After minikube installation, we are ready to start a cluster executing
 minikube start
 ```
 
-This process is heavy, so we need some patience... Few minutes later... the cluster is created and we can play with it. Before playing, we can evolve the minikube installation with some tips from minikube:
 - Alternatively, minikube can download the appropriate version of kubectl and you should be able to use it like this 
+
 ```
 minikube kubectl -- get po -A
 ```
+
 - Initially, some services such as the storage-provisioner, may not yet be in a Running state. This is a normal condition during cluster bring-up, and will resolve itself momentarily. For additional insight into your cluster state, minikube bundles the Kubernetes Dashboard, allowing you to get easily acclimated to your new environment:
+
 ```
 minikube dashboard
+```
+
+- To execute our yaml files we need to get the source, so we can clone the project and go to the folder of the project "cd k8s-realworld-htmx"
+
+```
+git clone https://github.com/ivanocat/k8s-realworld-htmx.git
+```
+
+- Now we can execute the comand to deploy our image in the container, but 
+
+```
+kubectl apply -f deployment.yaml
+```
+
+- To check the deployments
+
+```
+kubectl get deployments
+```
+
+- Execute the service
+
+```
+kubectl apply -f service.yaml
+```
+
+- To check the services
+
+```
+kubectl get services
+```
+
+- Finally we can execute the minikube command to expose the service, it will automatically open the browser to see the result
+
+```
+minikube service cca2324-bun-app-service
 ```
