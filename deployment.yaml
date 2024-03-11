@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cca2324-bun-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cca2324-bun-app
+  template:
+    metadata:
+      labels:
+        app: cca2324-bun-app
+    spec:
+      containers:
+        - name: cca2324-bun-app-container
+          image: ivanmargarit/cca2324-bun-app:latest
+          ports:
+            - containerPort: 3000
